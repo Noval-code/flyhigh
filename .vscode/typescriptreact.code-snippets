@@ -1,0 +1,23 @@
+{
+  "Functional Component from filename (fcs)": {
+    "prefix": "fcs",
+    "description": "Create a React Functional Component named from the current filename (PascalCase)",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface ${TM_FILENAME_BASE/(^\w|[\-\_](\w))/\U$1$2/g}Props {}",
+      "",
+      "const ${TM_FILENAME_BASE/(^\w|[\-\_](\w))/\U$1$2/g}: React.FC<${TM_FILENAME_BASE/(^\w|[\-\_](\w))/\U$1$2/g}Props> = ({}) => {",
+      "  return (",
+      "    <div>",
+      "      ${TM_FILENAME_BASE/(^\w|[\-\_](\w))/\U$1$2/g}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(^\w|[\-\_](\w))/\U$1$2/g};"
+    ]
+  }
+}
+
+
